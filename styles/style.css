@@ -137,12 +137,12 @@ main > section{
     padding-left: 20px;
     font-size: 2.9rem;
     font-weight: 700;
-    width: 468px;
+    max-width: 468px;
     margin-top: 25px;
 }
 .feature-description{
     font-weight: 400;
-    width: 586px;
+    max-width: 586px;
     margin-bottom: 30px;
     margin-top: 25px;
 }
@@ -160,6 +160,9 @@ main > section{
 .features-card p{
     margin-top: 10px;
 }
+.architect img{
+    width: 100%;
+}
 .btn-10-Year{
     width: 342px;
     height: 200px;
@@ -167,6 +170,8 @@ main > section{
     color: #ffffff;
     border-radius: 5px;
     border: none;
+    margin-left: -100px;
+    margin-top: -100px;
 }
 .Year{
     font-size: 4rem;
@@ -212,7 +217,8 @@ main > section{
 @media screen and (max-width:576px) {
     .navbar,
     .nav-links,
-    .teams{
+    .teams, 
+    .features{
         flex-direction: column;
     }
     .team-img-container, 
@@ -234,13 +240,24 @@ main > section{
     .hallo{
         text-align: center;
     }
+    .btn-10-Year{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
 }
 /* medium size device */
 @media screen and (min-width: 576px) and (max-width: 992px) {
-    .teams{
+    .teams, .features{
         flex-direction: column;
     }
     .our-features{
         margin-left: 50px auto;
+    }
+    .btn-10-Year{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .facts-container{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
